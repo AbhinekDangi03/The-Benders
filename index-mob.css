@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+    padding: 1% 1%;
+    box-sizing: border-box;
+    margin: 0px;
+    font-family: merriweather, sans-serif;
+    background-color: black;
+    color: cornsilk;
+    height:100%;
+    width:100%;
+}
+.slider-container{
+    height: 100%;
+    width: 100%;
+    overflow:hidden;
+}
+.slider-wrapper .slider-item{
+    width: 100%;
+    position:relative;
+    height: 100%;
+    
+}
+.slider-wrapper .slider-item .image{
+    display: flex;
+    width: 100%;
+    height: 70%;
+    padding:15% 10%;
+    margin-bottom: 10%;
+}
+
+.slider-wrapper .slider-item .image::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-image: url("images/air.jpeg") ;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 10px 10px  200px aqua;
+    animation: moving-glow-1 5s infinite alternate;
+}
+.slider-wrapper .slider-item:nth-child(2) .image::before{
+    background-image: url("images/water.jpeg");
+    box-shadow: 10px 10px  200px blue;
+    animation: moving-glow-2 5s infinite alternate;
+}
+.slider-wrapper .slider-item:nth-child(3) .image::before{
+    background-image: url("images/fire.jpeg");
+    box-shadow: 10px 10px  200px red;
+    animation: moving-glow-3 5s infinite alternate;
+}
+.slider-wrapper .slider-item:nth-child(4) .image::before{
+    background-image: url("images/earth.jpeg");
+    box-shadow: 10px 10px  200px green;
+    animation: moving-glow-4 5s infinite alternate;
+}
+
+
+
+.slider-wrapper .slider-item .slide-content{
+    color: #fff;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    font-size: 200;
+    margin-top: 5%;
+    line-height: 120%;
+}
+.slider-wrapper .slider-item .slide-content .name{
+    font-size: 600;
+    margin-bottom: 5%;
+}
+
+/* ELEMENTS */
+.slider-wrapper .slider-item .slide-content .element{
+    color: aqua;
+    margin-bottom: 7%;
+}
+.slider-wrapper .slider-item .slide-content .element-2{
+    color: blue;
+    margin-bottom: 7%;
+}
+.slider-wrapper .slider-item .slide-content .element-3{
+    color: rgba(216, 11, 11, 0.74);
+    margin-bottom: 7%;
+}
+.slider-wrapper .slider-item .slide-content .element-4{
+    color: rgb(0, 255, 34);
+    margin-bottom: 7%;
+}
+
+
+.slider-wrapper .slider-item .slide-content .char{
+     margin-bottom: 5%;
+}
+
+
+/* LINKS */
+.slider-wrapper .slider-item .slide-content .link{
+    font-style: none;
+    border: .5px solid white;
+    padding: 5px 20px;
+    transition: .2s ease-in-out;
+}
+.slider-wrapper .slider-item .slide-content .link-2{
+    font-style: none;
+    border: .5px solid white;
+    padding: 5px 20px;
+    transition: .2s ease-in-out;
+}
+.slider-wrapper .slider-item .slide-content .link-3{
+    font-style: none;
+    border: .5px solid white;
+    padding: 5px 20px;
+    transition: .2s ease-in-out;
+}
+.slider-wrapper .slider-item .slide-content .link-4{
+    font-style: none;
+    border: .5px solid white;
+    padding: 5px 20px;
+    transition: .2s ease-in-out;
+}
+
+
+/* LINKS HOVER */
+.slider-wrapper .slider-item .slide-content .link:hover{
+    box-shadow: 1px 1px 50px  rgb(8, 168, 231);
+}
+.slider-wrapper .slider-item .slide-content .link-2:hover{
+    box-shadow: 1px 1px 50px  rgb(3, 34, 117);
+}
+.slider-wrapper .slider-item .slide-content .link-3:hover{
+    box-shadow: 1px 1px 50px  rgba(216, 11, 11, 0.74);
+}
+.slider-wrapper .slider-item .slide-content .link-4:hover{
+    box-shadow: 1px 1px 50px  rgb(15, 70, 5);
+}
+
+
+/* ANIMATIONS */
+@keyframes moving-glow-1 {
+    0%, 100%{
+        box-shadow: 1px 0 50px 0.5px aqua;
+    }
+    50%{
+        box-shadow: 1px 0 99px 1px aqua;
+    }
+}
+@keyframes moving-glow-2 {
+    0%, 100%{
+        box-shadow: 1px 0 50px 0.5px rgb(3, 34, 117);
+    }
+    50%{
+        box-shadow: 1px 0 99px 1px rgb(27, 154, 204);
+    }
+}
+@keyframes moving-glow-3 {
+    0%, 100%{
+        box-shadow: 1px 0 50px 0.5px rgba(216, 11, 11, 0.74);
+    }
+    50%{
+        box-shadow: 1px 0 99px 1px rgb(255, 141, 35);
+    }
+}
+@keyframes moving-glow-4 {
+    0%, 100%{
+        box-shadow: 1px 0 50px 0.5px rgb(15, 70, 5);
+    }
+    50%{
+        box-shadow: 1px 0 99px 1px rgb(0, 255, 34);
+    }
+}
